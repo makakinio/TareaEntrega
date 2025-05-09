@@ -31,7 +31,9 @@ public class Articulo {
      */
     public boolean venderProducto(int cantidadAVender) {
         boolean ventaExitosa = false;
-        if (this.stock >= cantidadAVender && cantidadAVender > 0) {
+
+        if (this.stock > cantidadAVender && cantidadAVender > 0) {
+
             this.stock = this.stock - cantidadAVender;
             if (this.stock == 0) {
                 this.disponible = false;
